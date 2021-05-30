@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cookies</title>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<link rel="stylesheet" href="https://use.typekit.net/lkz0zjh.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+		body{
+			background-color: #FCFFF7!important;
+		}
+		h1{
+			font-family: 'Roboto', sans-serif;
+		    font-size: 3.75rem;
+		    line-height: 1;
+		    font-weight: 900;
+		    margin: 0;
+		}
+		.topo{
+			padding: 30px 0;
+			background-color: #D6D2D2;
+		}
+		.mainTopo{
+		    display: flex;
+		    align-items: center;
+		    flex-direction: column;
+		    justify-content: center;
+		}
+		.sublinhadoRoxo{
+			height: 13px;
+			width: 100%;
+			background-color: #90E0EF;
+			display: block;
+		}
+		.topo img{
+			height: 590px;
+			z-index: 999;
+		}
+		.triangle {
+    		width: 50%;
+    		height: 650px;
+		    background: linear-gradient(to bottom right, transparent 0%, transparent 50%, #90E0EF 50%, #90E0EF 100%);
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		}
+		.bodyCards{
+			padding: 30px 0;
+		}
+		.bigCard{
+			background-color: #02F2CE;
+			padding: 30px 30px 320px 30px;
+		}
+		.bigCard h2,
+		.bigText h2{
+			font-family: 'Roboto', sans-serif;
+		    font-size: 6rem;
+		    line-height: 1.1;
+		    font-weight: 700;
+		    color: #FCFFF7;
+		}
+		.smallCard{
+			padding: 30px;
+			background-color: #D6D2D2;
+			margin-bottom: 30px;
+		}
+		.smallCard h2{
+			font-family: 'Roboto', sans-serif;
+			font-weight: 700;
+			line-height: 1.3;
+			font-size: 2.25rem;
+		}
+		.smallCard a{
+			font-family: 'Roboto', sans-serif;
+			border-radius: 25px;
+		    text-transform: uppercase;
+		    letter-spacing: 2px;
+		    font-size: 0.875rem;
+		    border-style: none;
+		    font-weight: 700;
+		    margin: 21px auto 0 0;
+		    color: #FCFFF7;
+		    background-color: #02F2CE;
+		    padding: 8px 15px;
+		}
+		.smallCard img{
+			height: 400px;
+		}
+		.bigText{
+			background-color: #02F2CE;
+			padding: 30px 0;
+		}
+		.bigText h2{
+			font-size: 9rem;
+		}
+		.boxPicture{
+			width: 100%;
+			margin: 15px 0;
+		}
+		.boxPicture img{
+			object-fit: cover;
+			object-position: center;
+			height: 265px;
+			width: 100%;
+		}
+		.galeriaProduto{
+			padding: 30px 0;
+			background-color: #000;
+		}
+		.textBox{
+			width: 100%;
+			background-color: #FCFFF7;
+			padding: 30px;
+			margin-top: -70px;
+		}
+		.textBox h3{
+			font-family: 'Roboto', sans-serif;
+			font-weight: 700;
+			line-height: 1.3;
+			font-size: 3.25rem;
+		}
+		.textBox p{
+			font-family: 'Roboto', sans-serif;
+			font-weight: 400;
+			line-height: 1.3;
+			font-size: 1.25rem;
+		}
+		.bgGreen{
+		    height: 870px;
+		    position: absolute;
+		    width: 350px;
+		    background-color: #02F2CE;
+		    left: 30%;
+		}
+	</style>
+</head>
+<body>
+	<section class="topo">
+		<div class="container">
+			<div class="row">	
+				<div class="col-12 col-md-6 mainTopo">
+					<h1>Tagarela, um aplicativo para sua saúde mental</h1>
+					<div class="sublinhadoRoxo"></div>
+				</div>
+				<div class="col-12 col-md-6 mainTopo">
+					<img src="img/Mockup00.png">
+					
+				</div>
+			</div>
+		<div class="triangle"></div>
+		</div>
+	</section>
+	<section class="bodyCards">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6">
+					<div class="bigCard">
+						<h2>Faça coisas que você ama.</h2>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="smallCard">
+						<h2>Teste nosso prótotipo no figma!</h2>
+						<a href="https://www.figma.com/proto/Ue99oLQaPaSD8yv5SAtVHi/Tagarela?node-id=1%3A65&scaling=scale-down&page-id=1%3A39" target="_blank">Veja aqui</a>
+					</div>
+					<div class="smallCard">
+						<img src="img/Mockup01.png">
+						<img src="img/Mockup02.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bigText">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6 col-lg-4">
+					<h2>nós construímos digital.</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="galeriaProduto">
+		<div class="container">
+			<div class="row">
+				<div class="bgGreen"></div>
+				<div class="col-12 col-md-6 col-lg-4 boxPicture">
+					<a data-fancybox="gallery" href="https://img.freepik.com/free-psd/full-screen-smartphone-laptop-mockup-design_136295-391.jpg?size=626&ext=jpg"><img src="https://img.freepik.com/free-psd/full-screen-smartphone-laptop-mockup-design_136295-391.jpg?size=626&ext=jpg"></a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4 boxPicture">
+					<a data-fancybox="gallery" href="https://img.freepik.com/free-psd/full-screen-smartphone-laptop-mockup-design_136295-391.jpg?size=626&ext=jpg"><img src="https://img.freepik.com/free-psd/full-screen-smartphone-laptop-mockup-design_136295-391.jpg?size=626&ext=jpg"></a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4 boxPicture">
+					<a data-fancybox="gallery" href="https://img.freepik.com/free-psd/full-screen-smartphone-laptop-mockup-design_136295-391.jpg?size=626&ext=jpg"><img src="https://img.freepik.com/free-psd/full-screen-smartphone-laptop-mockup-design_136295-391.jpg?size=626&ext=jpg"></a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4 boxPicture">
+					<a data-fancybox="gallery" href="https://img.freepik.com/free-psd/full-screen-smartphone-laptop-mockup-design_136295-391.jpg?size=626&ext=jpg"><img src="https://img.freepik.com/free-psd/full-screen-smartphone-laptop-mockup-design_136295-391.jpg?size=626&ext=jpg"></a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4 boxPicture">
+					<a data-fancybox="gallery" href="https://img.freepik.com/free-psd/full-screen-smartphone-laptop-mockup-design_136295-391.jpg?size=626&ext=jpg"><img src="https://img.freepik.com/free-psd/full-screen-smartphone-laptop-mockup-design_136295-391.jpg?size=626&ext=jpg"></a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4 boxPicture">
+					<a data-fancybox="gallery" href="https://img.freepik.com/free-psd/full-screen-smartphone-laptop-mockup-design_136295-391.jpg?size=626&ext=jpg"><img src="https://img.freepik.com/free-psd/full-screen-smartphone-laptop-mockup-design_136295-391.jpg?size=626&ext=jpg"></a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-5 offset-md-7">
+					<div class="textBox">
+						<h3>Ajudando a cuidar de você</h3>
+						<p>lUt enim ad minim veniam, quis nostrud exercício ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor em reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
